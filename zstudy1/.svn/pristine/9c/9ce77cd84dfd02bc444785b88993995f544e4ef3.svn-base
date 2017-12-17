@@ -1,0 +1,23 @@
+package zstudy1.part4;
+
+public class BoardCafe implements Board{
+	private Write write;
+	
+
+	public void setWrite(Write write) {
+		this.write = write;
+	}
+
+	public BoardCafe() {
+		this.setWrite(Factory.getWriteInstance());
+	}
+	
+	public void boardWrite() {
+		write.doWrite();
+	}
+	
+	public void init() {
+		System.out.println("유후~~~");
+	}
+	
+}
